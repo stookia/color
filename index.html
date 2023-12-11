@@ -81,7 +81,7 @@
     function master(){
       const jp_name = document.getElementById('jp_name');
       const en_name = document.getElementById('en_name');
-      const url = docment.getElementById('next');
+      const next_url = docment.getElementById('next');
       const ref = document.referrer;
 
       const st1 = localStorage.getItem('st1')||0;
@@ -112,225 +112,79 @@
       const st27 = localStorage.getItem('st1')||0;
       const st28 = localStorage.getItem('st1')||0;
 
-       const st1_url ='https://stookia.github.io/color_kohfukuji-temple';
-      const st2_url = 'https://stookia.github.io/color_sarusawa-pond';
-      const st3_url = 'https://stookia.github.io/color_nara-craft-museum';
-      const st4_url = 'https://stookia.github.io/color_sugioka-kason-shodo';
-      const st5_url = 'https://stookia.github.io/color_narashiritu-shiryouhozonkan';
-      const st6_url = 'https://stookia.github.io/color_ashibinosato';
-      const st7_url = 'https://stookia.github.io/color_yoshikien-garden';
-      const st8_url = 'https://stookia.github.io/color_tokuyuji-temple';
-      const st9_url = 'https://stookia.github.io/color_nara-national-museum';
-      const st10_url = 'https://stookia.github.io/color_nigiwainoie';
-      const st11_url = 'https://stookia.github.io/color_monogatarikan';
-      const st12_url = 'https://stookia.github.io/color_onjyo-kan';
-      const st13_url = 'https://stookia.github.io/color_naramachi-shiryo-kan-museum';
-      const st14_url = 'https://stookia.github.io/color_neiya-workshop';
-      const st15_url = 'https://stookia.github.io/color_ho-tokuji';
-      const st16_url = 'https://stookia.github.io/color_kataoka-bairin';
-      const st17_url = 'https://stookia.github.io/color_daijyo-in';
-      const st18_url = 'https://stookia.github.io/color_ko-shinoie';
-      const st19_url = 'https://stookia.github.io/color_tobihino';
-      const st20_url = 'https://stookia.github.io/color_ukimido-gazebo';
-      const st21_url = 'https://stookia.github.io/color_jurin-in';
-      const st22_url = 'https://stookia.github.io/color_yugayama-enchi';
-      const st23_url = 'https://stookia.github.io/color_nara-park';
-      const st24_url = 'https://stookia.github.io/color_ensotei-house';
-      const st25_url = 'https://stookia.github.io/color_rokuen-park';
+      const url1 ='https://stookia.github.io/color_kohfukuji-temple';
+      const url2 = 'https://stookia.github.io/color_sarusawa-pond';
+      const url3 = 'https://stookia.github.io/color_nara-craft-museum';
+      const url4 = 'https://stookia.github.io/color_sugioka-kason-shodo';
+      const url5 = 'https://stookia.github.io/color_narashiritu-shiryouhozonkan';
+      const url6 = 'https://stookia.github.io/color_ashibinosato';
+      const url7 = 'https://stookia.github.io/color_yoshikien-garden';
+      const url8 = 'https://stookia.github.io/color_tokuyuji-temple';
+      const url9 = 'https://stookia.github.io/color_nara-national-museum';
+      const url10 = 'https://stookia.github.io/color_nigiwainoie';
+      const url11 = 'https://stookia.github.io/color_monogatarikan';
+      const url12 = 'https://stookia.github.io/color_onjyo-kan';
+      const url13 = 'https://stookia.github.io/color_naramachi-shiryo-kan-museum';
+      const url14 = 'https://stookia.github.io/color_neiya-workshop';
+      const url15 = 'https://stookia.github.io/color_ho-tokuji';
+      const url16 = 'https://stookia.github.io/color_kataoka-bairin';
+      const url17 = 'https://stookia.github.io/color_daijyo-in';
+      const url18 = 'https://stookia.github.io/color_ko-shinoie';
+      const url19 = 'https://stookia.github.io/color_tobihino';
+      const url20 = 'https://stookia.github.io/color_ukimido-gazebo';
+      const url21 = 'https://stookia.github.io/color_jurin-in';
+      const url22 = 'https://stookia.github.io/color_yugayama-enchi';
+      const url23 = 'https://stookia.github.io/color_nara-park';
+      const url24 = 'https://stookia.github.io/color_ensotei-house';
+      const url25 = 'https://stookia.github.io/color_rokuen-park';
 
-      if(ref.includes()&&st1===0){
+      if(ref.includes(url1 + "/")&&st1===0){
         jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-temple-googlefrom/";
+        en_name.textContent = "Kohfukuji Temple";
+        next_url.href = url1 + "-googlefrom/";
       }if(st1!==0){
         alert("この地点は解答済みです。\nYou have already answered about this point. );
       }
 
-      if(ref.includes('https://stookia.github.io/color_sarusawa-pond/')&&st2===0){
+      if(ref.includes(url2 + "/")&&st2===0){
         jp_name.textContent = "猿沢池";
         en_name.textContent = "Sarusawa Pond";
-        url.href = "https://stookia.github.io/color_sarusawa-pond-googlefrom/";
+        next_url.href = url2 + "-googlefrom/";
       }if(st2!==0){
         alert("この地点は解答済みです。\nYou have already answered about this point. );
       }
 
-      if(ref.includes('https://stookia.github.io/color_nara-craft-museum/')&&st3===0){
+      if(ref.includes(url3 + "/")&&st3===0){
         jp_name.textContent = "なら工藝館";
         en_name.textContent = "Nara Craft Museum";
-        url.href = "https://stookia.github.io/color_nara-craft-museum-googlefrom/";
+        next_url.href = url3 + "-googlefrom/";
       }if(st3!==0){
         alert("この地点は解答済みです。\nYou have already answered about this point. );
       }
-      
-      if(ref.includes('https://stookia.github.io/color_sugioka-kason-shodo/')&&st4===0){
-        jp_name.textContent = "奈良市杉岡華邨書道美術館";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_sugioka-kason-shodo-googlefrom/";
-      }if(st4!==0){
+
+      if(ref.includes(url + "/")&&st1===0){
+        jp_name.textContent = "";
+        en_name.textContent = "";
+        url.href = url + "-googlefrom/";
+      }if(st1!==0){
         alert("この地点は解答済みです。\nYou have already answered about this point. );
       }
-
-      if(ref.includes('https://stookia.github.io/color_historical-materials-preservation-house/')&&st5===0){
-        jp_name.textContent = "奈良市立史料保存館";
-        en_name.textContent = "Historical Materials Preservation House";
-        url.href = "https://stookia.github.io/color_historical-materials-preservation-house-googlefrom/";
-      }if(st5!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_ashibinosato/')&&st6===0){
-        jp_name.textContent = "あしびの郷";
-        en_name.textContent = "Ashibinosato";
-        url.href = "https://stookia.github.io/color_ashibinosato-googlefrom/";
-      }if(st6!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_yoshikien-garden/')&&st7===0){
-        jp_name.textContent = "吉城園";
-        en_name.textContent = "Yoshikien Garden";
-        url.href = "https://stookia.github.io/color_yoshikien-garden-googlefrom/";
-      }if(st7!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_tokuyuji-temple/')&&st8===0){
-        jp_name.textContent = "徳融寺";
-        en_name.textContent = "Tokuyuji Temple";
-        url.href = "https://stookia.github.io/color_tokuyuji-temple-googlefrom/";
-      }if(st8!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_nara-national-museum/')&&st9===0){
-        jp_name.textContent = "奈良国立博物館";
-        en_name.textContent = "Nara National Museum";
-        url.href = "https://stookia.github.io/color_nara-national-museum-googlefrom/";
-      }if(st9!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_naramachi-nigiwai-no-ie/')&&st10===0){
-        jp_name.textContent = "奈良町にぎわいの家";
-        en_name.textContent = "Naramachi Nigiwai-no-ie";
-        url.href = "https://stookia.github.io/color_naramachi-nigiwai-no-ie-googlefrom/";
-      }if(st10!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
+   
+      if(ref.includes(url + "/")&&st1===0){
+        jp_name.textContent = "";
+        en_name.textContent = "";
+        url.href = url + "-googlefrom/";
       }if(st1!==0){
         alert("この地点は解答済みです。\nYou have already answered about this point. );
       }
 
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
+      if(ref.includes(url + "/")&&st1===0){
+        jp_name.textContent = "";
+        en_name.textContent = "";
+        url.href = url + "-googlefrom/";
       }if(st1!==0){
         alert("この地点は解答済みです。\nYou have already answered about this point. );
       }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      if(ref.includes('https://stookia.github.io/color_kohfukuji/')&&st1===0){
-        jp_name.textContent = "興福寺";
-        en_name.textContent = "Kohfuku-ji Temple";
-        url.href = "https://stookia.github.io/color_kohfukuji-googlefrom/";
-      }if(st1!==0){
-        alert("この地点は解答済みです。\nYou have already answered about this point. );
-      }
-
-      
     
     function clickButton(button){
       	const color = button.value;
