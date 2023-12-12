@@ -87,35 +87,34 @@
       const en_name = document.getElementById('en_name');
       const next_url = document.getElementById('next');
       const ref = document.referrer;
-      var alert_count = 0;
 
-      const st1 = localStorage.getItem('st1')||0;
-      const st2 = localStorage.getItem('st1')||0;
-      const st3 = localStorage.getItem('st1')||0;
-      const st4 = localStorage.getItem('st1')||0;
-      const st5 = localStorage.getItem('st1')||0;
-      const st6 = localStorage.getItem('st1')||0;
-      const st7 = localStorage.getItem('st1')||0;
-      const st8 = localStorage.getItem('st1')||0;
-      const st9 = localStorage.getItem('st1')||0;
-      const st10 = localStorage.getItem('st1')||0;
-      const st11 = localStorage.getItem('st1')||0;
-      const st12 = localStorage.getItem('st1')||0;
-      const st13 = localStorage.getItem('st1')||0;
-      const st14 = localStorage.getItem('st1')||0;
-      const st15 = localStorage.getItem('st1')||0;
-      const st16 = localStorage.getItem('st1')||0;
-      const st17 = localStorage.getItem('st1')||0;
-      const st18 = localStorage.getItem('st1')||0;
-      const st19 = localStorage.getItem('st1')||0;
-      const st20 = localStorage.getItem('st1')||0;
-      const st21 = localStorage.getItem('st1')||0;
-      const st22 = localStorage.getItem('st1')||0;
-      const st23 = localStorage.getItem('st1')||0;
-      const st24 = localStorage.getItem('st1')||0;
-      const st25 = localStorage.getItem('st1')||0;
-      const st26 = localStorage.getItem('st1')||0;
-      const st27 = localStorage.getItem('st1')||0;
+      let st1 = localStorage.getItem('st1')||0;
+      let st2 = localStorage.getItem('st1')||0;
+      let st3 = localStorage.getItem('st1')||0;
+      let st4 = localStorage.getItem('st1')||0;
+      let st5 = localStorage.getItem('st1')||0;
+      let st6 = localStorage.getItem('st1')||0;
+      let st7 = localStorage.getItem('st1')||0;
+      let st8 = localStorage.getItem('st1')||0;
+      let st9 = localStorage.getItem('st1')||0;
+      let st10 = localStorage.getItem('st1')||0;
+      let st11 = localStorage.getItem('st1')||0;
+      let st12 = localStorage.getItem('st1')||0;
+      let st13 = localStorage.getItem('st1')||0;
+      let st14 = localStorage.getItem('st1')||0;
+      let st15 = localStorage.getItem('st1')||0;
+      let st16 = localStorage.getItem('st1')||0;
+      let st17 = localStorage.getItem('st1')||0;
+      let st18 = localStorage.getItem('st1')||0;
+      let st19 = localStorage.getItem('st1')||0;
+      let st20 = localStorage.getItem('st1')||0;
+      let st21 = localStorage.getItem('st1')||0;
+      let st22 = localStorage.getItem('st1')||0;
+      let st23 = localStorage.getItem('st1')||0;
+      let st24 = localStorage.getItem('st1')||0;
+      let st25 = localStorage.getItem('st1')||0;
+      let st26 = localStorage.getItem('st1')||0;
+      let st27 = localStorage.getItem('st1')||0;
 
       const url1 ='https://stookia.github.io/color_kohfukuji-temple';
       const url2 = 'https://stookia.github.io/color_sarusawa-pond';
@@ -148,10 +147,11 @@
         en_name.textContent = "Kohfukuji Temple";
         next_url.href = url1 + "-googlefrom/";
 	localStorage.setItem('now','1');
-      }else if(st1!==0&&alert_count===0){
+      }else if(st1!==0){
 	var alert_count = 1;
         alert("この地点は解答済みです。\nYou have already answered about this point.");
-	console.log(alert_count);
+	let st1 = 0;
+	console.log(st1);
       }else{
 	document.location="https://stookia.github.io/color_basesite/";
       }
