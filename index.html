@@ -71,12 +71,14 @@
 	<a id="next" href="https://stookia.github.io/color_daijo-in-select_color/">次へ</a>
  	</div>
 <script>
-    document.addEventListener('DOMContentLoaded',master());
+    document.addEventListener('DOMContentLoaded',master();ownId(););
     function ownId(){
+      const vec = Array.of('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
       const id = localStorage.detItem('id')||0;
       if(id===0){
+	const a = Math.floor(Math.random()*26)+1;
         const random = Math.floor(Math.random()*9000000000)+1000000000;
-        localStorage.setItem('id',random);
+        localStorage.setItem('id',vec[a] + random);
       }}
 
     function master(){
