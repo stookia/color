@@ -75,7 +75,7 @@
     document.addEventListener('DOMContentLoaded',ownId());
     function ownId(){
       const vec = Array.of('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
-      const id = localStorage.detItem('id')||0;
+      const id = localStorage.getItem('id')||0;
       if(id===0){
 	const a = Math.floor(Math.random()*26)+1;
         const random = Math.floor(Math.random()*9000000000)+1000000000;
