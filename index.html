@@ -131,9 +131,13 @@
 			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
 	let arr = JSON.parse(localStorage.getItem('arr')||"");
-	jp_name.textContent = jp_vec[now];
-        en_name.textContent = en_vec[now];
-        next_url.href = url + sp_vec[now] + "-googlefrom/";
+	if(arr.includes(now)){
+		document.location="https://stookia.github.io/color_basesite/";
+	}else{
+		jp_name.textContent = jp_vec[now];
+        	en_name.textContent = en_vec[now];
+        	next_url.href = url + sp_vec[now] + "-googlefrom/";
+	}
 
 	
 	
