@@ -133,7 +133,7 @@
 	const now = localStorage.getItem('now');
 	let arr = localStorage.getItem('arr')||0;
 	arr = JSON.parse(arr);
-	if(arr.includes(now)){
+	if(now.includes(arr)){
 		document.location="https://stookia.github.io/color_basesite/";
 	}else{
 		jp_name.textContent = jp_vec[now];
