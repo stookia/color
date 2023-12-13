@@ -130,7 +130,7 @@
 		if(ref.includes(element)){
 			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
-	let arr = localStorage.getItem('arr')||['0'];
+	var arr = localStorage.getItem('arr')||['0'];
 	
 	if(console.log(Array.isArray(arr))){
 		arr.push(Number(now));
