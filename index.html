@@ -131,7 +131,8 @@
 		if(ref.includes(element)){
 			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
-	let arr = JSON.parse(localStorage.getItem('arr')||"");
+	let arr = localStorage.getItem('arr')||"";
+	let arr = JSON.parse(arr);
 	if(arr.includes(now)){
 		document.location="https://stookia.github.io/color_basesite/";
 	}else{
