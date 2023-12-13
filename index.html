@@ -130,12 +130,14 @@
 		if(ref.includes(element)){
 			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
-	let arr = localStorage.getItem('arr')||['0','0'];
-	console.log(Array.isArray(arr));
-	arr = JSON.parse(arr);
+	let arr = localStorage.getItem('arr')||['0'];
 	
-	arr.push(now);
-	localStorage.setItem('arr',arr);
+	if(console.log(Array.isArray(arr))===False){
+		arr = JSON.parse(arr);
+		arr.push(now);
+		localStorage.setItem('arr',arr);
+	}else{arr.push(now);
+		localStorage.setItem('arr',arr);}
 	if(now.includes(arr)){
 		document.location="https://stookia.github.io/color_basesite/";
 	}else{
