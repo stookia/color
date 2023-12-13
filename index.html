@@ -132,6 +132,7 @@
 	const now = localStorage.getItem('now');
 	localStorage.setItem('sp'+now,1);
 	const checker = localStorage.getItem('sp'+now);
+	console.log(checker);
 	if(checker === 1){
 		document.location="https://stookia.github.io/color_basesite/";
 	}else{
