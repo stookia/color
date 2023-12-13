@@ -132,7 +132,7 @@
 			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
 	let arr = localStorage.getItem('arr')||0;
-	let arr = JSON.parse(arr);
+	arr = JSON.parse(arr);
 	if(arr.includes(now)){
 		document.location="https://stookia.github.io/color_basesite/";
 	}else{
