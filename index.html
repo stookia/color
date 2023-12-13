@@ -85,7 +85,7 @@
     function master(){
       const jp_name = document.getElementById('jp_name');
       const en_name = document.getElementById('en_name');
-      const next_url = document.getElementById('next');
+      let next_url = document.getElementById('next');
       const ref = document.referrer;
 
       const st1 = localStorage.getItem('st1')||0;
@@ -138,8 +138,8 @@
 	}else{
 		jp_name.textContent = jp_vec[now];
         	en_name.textContent = en_vec[now];
-        	next_url.href = url + sp_vec[now] + "-googlefrom/";
-		console.log(next_url.href);
+        	next_url = url + sp_vec[now] + "-googlefrom/";
+		console.log(next_url);
 	}
 
 	
