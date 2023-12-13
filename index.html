@@ -131,8 +131,9 @@
 			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
 	let arr = localStorage.getItem('arr')||['0','0'];
-	arr = JSON.parse(arr);
 	console.log(Array.isArray(arr));
+	arr = JSON.parse(arr);
+	
 	arr.push(now);
 	localStorage.setItem('arr',arr);
 	if(now.includes(arr)){
