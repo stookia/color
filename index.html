@@ -133,10 +133,10 @@
 	let arr = localStorage.getItem('arr')||['0'];
 	
 	if(console.log(Array.isArray(arr))){
-		arr.push(now);
+		arr.push(Number(now));
 		localStorage.setItem('arr',arr);
 	}else{arr = JSON.parse(arr);
-	      	arr.push(now);
+	      	arr.push(Number(now));
 		localStorage.setItem('arr',arr);}
 	if(now.includes(arr)){
 		document.location="https://stookia.github.io/color_basesite/";
