@@ -128,7 +128,7 @@
 
 	sp_vec.forEach((element,index) => {
 		if(ref.includes(element)){
-			localStorage.setItem('now',Number(index) +1);}});
+			localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
 	let arr = localStorage.getItem('arr')||0;
 	arr = JSON.parse(arr);
