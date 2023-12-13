@@ -128,22 +128,16 @@
 
 	sp_vec.forEach((element,index) => {
 		if(ref.includes(element)){
-			localStorage.setItem('now',index);}});
+		localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
-	var arr = localStorage.getItem('arr')||['0'];
-	
-	if(console.log(Array.isArray(arr))){
-		arr.push(Number(now));
-		localStorage.setItem('arr',arr);
-	}else{JSON.parse(arr).push(Number(now));
-		localStorage.setItem('arr',arr);}
-	if(now.includes(arr)){
+	localStorage.setItem('sp'+now,1);
+	const checker = localStorage.getItem('sp'+now);
+	if(checker === 1){
 		document.location="https://stookia.github.io/color_basesite/";
 	}else{
 		jp_name.textContent = jp_vec[now];
         	en_name.textContent = en_vec[now];
         	const next = url + sp_vec[now] + "-googlefrom/";
-		console.log(sp_vec[now]);
 		next_url.href = next;
 	}
 
