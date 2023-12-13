@@ -133,12 +133,12 @@
 	localStorage.setItem('sp'+now,1);
 	const checker = localStorage.getItem('sp'+now);
 	console.log(checker);
-	if(checker!==1){
+	if(checker!=='1'){
 		jp_name.textContent = jp_vec[now];
         	en_name.textContent = en_vec[now];
         	const next = url + sp_vec[now] + "-googlefrom/";
 		next_url.href = next;
-	}else if(checker===1){
+	}else if(checker==='1'){
 		window.location.href="https://stookia.github.io/color_basesite/";
 	}
 
