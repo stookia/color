@@ -85,9 +85,9 @@
     function master(){
       const jp_name = document.getElementById('jp_name');
       const en_name = document.getElementById('en_name');
-      let next_url = document.getElementById('next');
+      //let next_url = document.getElementById('next');
       const ref = document.referrer;
-
+/*
       const st1 = localStorage.getItem('st1')||0;
       const st2 = localStorage.getItem('st2')||0;
       const st3 = localStorage.getItem('st3')||0;
@@ -120,11 +120,11 @@
       const st30 = localStorage.getItem('st1')||0;
       const st31 = localStorage.getItem('st1')||0;
       const st32 = localStorage.getItem('st1')||0;
-
-      const url = 'https://stookia.github.io/color_';
+*/
+      //const url = 'https://stookia.github.io/color_';
       const sp_vec = Array.of('','isagawa-shrine','denko-ji','sarusawa-pond','nara-craft-museum','sugioka-kason-shodo','narashiritu-shiryouhozonkan','ashibinosato','yoshikien-garden','tokuyuji-temple','nara-national-museum','nigiwainoie','monogatarikan','onjyo-kan','naramachi-shiryo-kan-museum','neiya-workshop','ho-tokuji','kataoka-bairin','daijyo-in','ko-shinoie','tobihino','ukimido-gazebo','shikinoniwa','jurin-in','yugayama-enchi','nara-park','ensotei-house','rokuen-park','kohfukuji-temple','gango-ji-temple','todai-ji-temple','jr-nara-station','kintetu-nara-station');
-      const jp_vec = Array.of('','率川神社','伝香寺','猿沢池','なら工藝館','奈良市杉岡華邨書道美術館','奈良市史料保存館','あしびの郷','吉城園','徳融寺','奈良国立博物館','奈良町にぎわいの家','奈良町物語館','奈良市音声館','奈良町資料館','寧屋工房','法徳寺','片岡梅林','旧大乗院庭園','ならまち格子の家','飛火野','浮見堂','子規の庭','十輪院','瑜伽山園地','奈良公園','円窓亭','鹿苑','興福寺','元興寺','東大寺','JR 奈良駅','近鉄奈良駅');
-      const en_vec = Array.of('','Isagawa Shrine','Denko-ji Temple','Sarusawa Pond','Nara Craft Museum','Sugioka Kason Calligraphy Art Museum','Historical Materials Preservation House','Ashibinosato','Yoshikien Garden','Tokuyuji','Nara　National Museum','Naramaachi Nigiwai-No-Ie','Naramachi Story Museum','Onjyo-Kan Hall','Naramachi Shiryo-Kan Museum','Neiya Workshop','Hotoku-ji Temple','Kataoka Bairin','Former Daijo-in Temple Garden','Naramachi Koshi-No-Ie','Tobihino','Ukimido Gazebo','Shikinoniwa','Jurin-in','Yugayama Enchi','Nara Park','Ensotei House','Rokuen Park','Kohfuku-ji Temple','Gango-ji Temple','Todai-ji Temple','JR Nara Station','Kintetsu Nara Station');
+      //const jp_vec = Array.of('','率川神社','伝香寺','猿沢池','なら工藝館','奈良市杉岡華邨書道美術館','奈良市史料保存館','あしびの郷','吉城園','徳融寺','奈良国立博物館','奈良町にぎわいの家','奈良町物語館','奈良市音声館','奈良町資料館','寧屋工房','法徳寺','片岡梅林','旧大乗院庭園','ならまち格子の家','飛火野','浮見堂','子規の庭','十輪院','瑜伽山園地','奈良公園','円窓亭','鹿苑','興福寺','元興寺','東大寺','JR 奈良駅','近鉄奈良駅');
+      //const en_vec = Array.of('','Isagawa Shrine','Denko-ji Temple','Sarusawa Pond','Nara Craft Museum','Sugioka Kason Calligraphy Art Museum','Historical Materials Preservation House','Ashibinosato','Yoshikien Garden','Tokuyuji','Nara　National Museum','Naramaachi Nigiwai-No-Ie','Naramachi Story Museum','Onjyo-Kan Hall','Naramachi Shiryo-Kan Museum','Neiya Workshop','Hotoku-ji Temple','Kataoka Bairin','Former Daijo-in Temple Garden','Naramachi Koshi-No-Ie','Tobihino','Ukimido Gazebo','Shikinoniwa','Jurin-in','Yugayama Enchi','Nara Park','Ensotei House','Rokuen Park','Kohfuku-ji Temple','Gango-ji Temple','Todai-ji Temple','JR Nara Station','Kintetsu Nara Station');
 
 	sp_vec.forEach((element,index) => {
 		if(ref.includes(element)){
@@ -133,10 +133,15 @@
 	const click = localStorage.getItem('ckick'+now)||0;
 	const checker = localStorage.getItem('sp'+now)||0;
 	if(click === '0'){
+		const next_url = document.getElementById('next');
+		const url = 'https://stookia.github.io/color_';
+		const sp_vec = Array.of('','isagawa-shrine','denko-ji','sarusawa-pond','nara-craft-museum','sugioka-kason-shodo','narashiritu-shiryouhozonkan','ashibinosato','yoshikien-garden','tokuyuji-temple','nara-national-museum','nigiwainoie','monogatarikan','onjyo-kan','naramachi-shiryo-kan-museum','neiya-workshop','ho-tokuji','kataoka-bairin','daijyo-in','ko-shinoie','tobihino','ukimido-gazebo','shikinoniwa','jurin-in','yugayama-enchi','nara-park','ensotei-house','rokuen-park','kohfukuji-temple','gango-ji-temple','todai-ji-temple','jr-nara-station','kintetu-nara-station');
+      		const jp_vec = Array.of('','率川神社','伝香寺','猿沢池','なら工藝館','奈良市杉岡華邨書道美術館','奈良市史料保存館','あしびの郷','吉城園','徳融寺','奈良国立博物館','奈良町にぎわいの家','奈良町物語館','奈良市音声館','奈良町資料館','寧屋工房','法徳寺','片岡梅林','旧大乗院庭園','ならまち格子の家','飛火野','浮見堂','子規の庭','十輪院','瑜伽山園地','奈良公園','円窓亭','鹿苑','興福寺','元興寺','東大寺','JR 奈良駅','近鉄奈良駅');
+      		const en_vec = Array.of('','Isagawa Shrine','Denko-ji Temple','Sarusawa Pond','Nara Craft Museum','Sugioka Kason Calligraphy Art Museum','Historical Materials Preservation House','Ashibinosato','Yoshikien Garden','Tokuyuji','Nara　National Museum','Naramaachi Nigiwai-No-Ie','Naramachi Story Museum','Onjyo-Kan Hall','Naramachi Shiryo-Kan Museum','Neiya Workshop','Hotoku-ji Temple','Kataoka Bairin','Former Daijo-in Temple Garden','Naramachi Koshi-No-Ie','Tobihino','Ukimido Gazebo','Shikinoniwa','Jurin-in','Yugayama Enchi','Nara Park','Ensotei House','Rokuen Park','Kohfuku-ji Temple','Gango-ji Temple','Todai-ji Temple','JR Nara Station','Kintetsu Nara Station');
 		jp_name.textContent = jp_vec[now];
         	en_name.textContent = en_vec[now];
         	const next = url + sp_vec[now] + "-googlefrom/";
-		localStorage.setItem('sp'+now,1);
+		localStorage.setItem('sp'+now,'1');
 		next_url.href = next;
 	}else if(checker==='1'&& click==='1'){
 		window.location.href="https://stookia.github.io/color_basesite/";
