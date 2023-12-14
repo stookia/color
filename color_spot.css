@@ -3,11 +3,12 @@
 body{
 	font-size: 12pt;
 	line-height: 0.7em;
+	background-color: #ffffff;
 }
 
 .main {
 	margin: auto;
-	width: 400px;
+	width: 800px;
 }
 
 .box {
