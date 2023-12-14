@@ -132,7 +132,9 @@
 	const now = localStorage.getItem('now');
 	const click = localStorage.getItem('ckick'+now)||0;
 	const checker = localStorage.getItem('sp'+now)||0;
+	console.log(click);
 	if(click === '0'){
+		console.log(click);
 		const next_url = document.getElementById('next');
 		const url = 'https://stookia.github.io/color_';
 		const sp_vec = Array.of('','isagawa-shrine','denko-ji','sarusawa-pond','nara-craft-museum','sugioka-kason-shodo','narashiritu-shiryouhozonkan','ashibinosato','yoshikien-garden','tokuyuji-temple','nara-national-museum','nigiwainoie','monogatarikan','onjyo-kan','naramachi-shiryo-kan-museum','neiya-workshop','ho-tokuji','kataoka-bairin','daijyo-in','ko-shinoie','tobihino','ukimido-gazebo','shikinoniwa','jurin-in','yugayama-enchi','nara-park','ensotei-house','rokuen-park','kohfukuji-temple','gango-ji-temple','todai-ji-temple','jr-nara-station','kintetu-nara-station');
