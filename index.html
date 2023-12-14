@@ -68,7 +68,7 @@
     	<input class="chosen_color" type="text" value="#ffffff">
     	です。
   </p>
-	<a id="next" href="https://stookia.github.io/color_daijo-in-select_color/">次へ</a>
+	<a id="next" href="https://stookia.github.io/color_daijo-in-select_color/" onclick="click()">次へ</a>
  	</div>
 <script>
     document.addEventListener('DOMContentLoaded',master());
@@ -130,17 +130,22 @@
 		if(ref.includes(element)){
 		localStorage.setItem('now',index);}});
 	const now = localStorage.getItem('now');
+	const click = localStorage.getItem('ckick'+now)||0;
 	const checker = localStorage.getItem('sp'+now)||0;
-	if(checker!=='1'){
+	if(click === '0'){
 		jp_name.textContent = jp_vec[now];
         	en_name.textContent = en_vec[now];
         	const next = url + sp_vec[now] + "-googlefrom/";
 		localStorage.setItem('sp'+now,1);
 		next_url.href = next;
-	}else if(checker==='1'){
+	}else if(checker==='1'&& click==='1'){
 		window.location.href="https://stookia.github.io/color_basesite/";
 	}
-
+	
+	function click(){
+		const now = localStorage.getItem('now');
+		localStorage.setItem('click'+now,1)
+	}
 	
 	
 /*	    
