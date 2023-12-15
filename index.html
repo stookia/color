@@ -5,6 +5,16 @@
   <title id="title">Color Spot</title>
   <link href="color_spot.css" rel="stylesheet" type="text/css">
 <script>
+	function ownId(){
+      	const vec = Array.of('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+      	const id = localStorage.getItem('id')||0;
+      	if(id===0){
+		const a = Math.floor(Math.random()*26)+1;
+        	const random = Math.floor(Math.random()*9000000000)+1000000000;
+        	localStorage.setItem('id',vec[a] + random);
+     	}}
+	document.addEventListener('DOMContentLoaded',ownId());
+	
 	const sp_vec = Array.of('','isagawa-shrine','denko-ji','sarusawa-pond','nara-craft-museum','sugioka-kason-syodo','narashiritu-shiryouhozonkan','ashibinosato','yoshikien-garden','tokuyuji-temple','nara-buddhist-sculpture-hall','nigiwainoie','monogatarikan','onjyo-kan','naramachi-shiryo-kan-museum','neiya-workshop','ho-tokuji','kataoka-bairin','daijyo-in','ko-shinoie','tobihino','ukimido-gazebo','shikinoniwa','jurin-in','yugayama-enchi','nara-park','manyo-botanical-garden','rokuen-park','kohfukuji-temple','gango-ji-temple','kozenji-temple','jr-nara-station','kintetu-nara-station');
 	const ref = document.referrer;
 	if(!localStorage.getItem('visit')){
