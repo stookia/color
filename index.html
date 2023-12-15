@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Color Spot</title>
   <link href="color_spot.css" rel="stylesheet" type="text/css">
+<script>
+	if(!localStorage.getItem('visit')){
+		window.location.href = 'https://stookia.github.io/color_basic-information/';
+	}
+</script>
 </head>
 
 <body>
@@ -137,9 +142,7 @@
 	localStorage.setItem('sp'+now,1);
 	next_url.href = next;
 */
-	if(!localStorage.getItem('visit')){
-		window.location.href = 'https://stookia.github.io/color_basic-information/';
-    	}else if(!localStorage.getItem('sp'+ now)){
+	if(!localStorage.getItem('sp'+ now)){
 		localStorage.setItem('sp'+ now,1);
 		jp_name.textContent = jp_vec[now];
         	en_name.textContent = en_vec[now];
