@@ -20,10 +20,21 @@
 
 <body>
 	<div class="main">
+	<div class="a">
   	<p id="jp_name" class="spot">名称</p>
-    	<p id="en_name" class="spot">spot_name</p>
-  	<p class="que">この場所で感じた「気持ち」の色を選んで下さい。</p>
-		<div class="container">
+    	<p id="en_name" class="spot">spot_name</p><br>
+  	<p class="text">この場所で感じた「気持ち」の色を選んで下さい。<br>Please choose a color that matches the feeling yo have in this place.</p><br>
+	</div>
+	<div class="kannseigo">
+		<div class="f"><p class="feel">にぎやかな<br>ドキドキ</p></div>
+		<div class="f"><p class="feel">楽しい<br>興味深い</p></div>
+		<div class="f"><p class="feel">陽気な<br>気分が上がる</p></div>
+		<div class="f"><p class="feel">癒される<br>のんびり</p></div>
+		<div class="f"><p class="feel">きれいな<br>静かな</p></div>
+		<div class="f"><p class="feel">落ち着いた</p></div>
+		<div class="f"><p class="feel">神秘的な</p></div>
+	</div><br>
+	<div class="container">
 	<button class="button" id="1" type="button" onclick="clickButton(this)" style="background-color: #E0324A" value="#e0324a"></button>
 	<button class="button" id="2" type="button" onclick="clickButton(this)" style="background-color: #FFA851" value="#ffa851"></button>
 	<button class="button" id="3" type="button" onclick="clickButton(this)" style="background-color: #FFD351" value="#ffd351"></button>
@@ -74,13 +85,13 @@
 	<button class="button" id="48" type="button" onclick="clickButton(this)" style="background-color: #111C2B" value="#111c2b"></button>
 	<button class="button" id="49" type="button" onclick="clickButton(this)" style="background-color: #532766" value="#532766"></button>
 	</div>
-  <p class="que">
-    	あなたが選んだ色は
+  <p class="text">
+    	あなたが選んだ色は<br>The color you chose is...
 	    <div class="box" style="background-color: #ffffff;"></div><br>
     	<input class="chosen_color" type="text" value="#ffffff">
     	です。
   </p>
-	<a id="next" href="https://stookia.github.io/color_daijo-in-select_color/" onclick="clickFunc()">次へ</a>
+	<a id="next" href="https://stookia.github.io/color_daijo-in-select_color/" onclick="clickFunc()">次へ / next</a>
  	</div>
 <script>
     document.addEventListener('DOMContentLoaded',master());
