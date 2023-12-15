@@ -120,7 +120,8 @@
         	en_name.textContent = en_vec[now];
 		title.textContent = jp_vec[now] + " " + en_vec[now];
         	next_url.href = url + sp_vec[now] + "-googlefrom/";
-    	}else if(localStorage.getItem('sp'+ now)===1){
+    	}
+	if(localStorage.getItem('sp'+ now)===1){
 	    	window.location.href = 'https://stookia.github.io/color_basesite/';
 	}
     }
