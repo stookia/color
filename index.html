@@ -6,6 +6,11 @@
   <link href="color_spot.css" rel="stylesheet" type="text/css">
 <script>
 	if(!localStorage.getItem('visit')){
+		sp_vec.forEach((element,index) => {
+			if(ref.includes(element)){
+			localStorage.setItem('now',index);
+			}
+		});
 		window.location.href = 'https://stookia.github.io/color_basic-information/';
 	}
 </script>
