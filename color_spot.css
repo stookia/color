@@ -3,12 +3,40 @@
 body{
 	font-size: 12pt;
 	line-height: 0.7em;
-	background-color: #ffffff;
 }
 
 .main {
 	margin: auto;
 	width: 800px;
+	padding:10px 0; 
+}
+.a{
+	padding: 5px 0;
+}
+.kannseigo{
+	display: flex;
+	align-content: center;
+}
+
+.f{
+	flex: 1;
+	align-content: center;
+  	width: 110px;
+	height: 60px;
+  	color: #FFFFFF;
+	border-left: #000000 solid 0.5pt;
+	border-right: #000000 solid 0.5pt;
+}
+
+.feel{
+	margin: auto;
+	text-align: center;
+	color: #000000;
+	line-height: 1.5em;
+}
+
+.text{
+	line-height: 1.5em;
 }
 
 .box {
@@ -35,10 +63,9 @@ button {
 }
 
 .container{
-	width: 400px;
 	display: grid;
 	grid-template-columns: repeat(7,1fr);
-	grid-template-rows: repeat(7,1fr);
+	grid-template-rows: repeat(7, 1fr);
 	grid-gap: 5px;
 }
 /* ボタンのスタイル */
@@ -48,8 +75,8 @@ button {
 	align-items: center;
 	border: none;
 	transition: box-shadow 0.3s ease;
-  	width: 50px;
-  	height: 25px;
+  	width: 110px;
+  	height: 50px;
   	color: #FFFFFF;
 }
 
