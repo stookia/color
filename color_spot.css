@@ -21,7 +21,7 @@ body{
 .f{
 	flex: 1;
 	align-content: center;
-  	width: 110px;
+  	width: 100px;
 	height: 60px;
   	color: #FFFFFF;
 	border-left: #000000 solid 0.5pt;
