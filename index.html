@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title id="title">Color Spot</title>
+  <link href="color_spot.css" rel="stylesheet" type="text/css">
+<script>
+	function ownId(){
+      	const vec = Array.of('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+      	const id = localStorage.getItem('id')||0;
+      	if(id===0){
+		const a = Math.floor(Math.random()*26)+1;
+        	const random = Math.floor(Math.random()*9000000000)+1000000000;
+        	localStorage.setItem('id',vec[a] + random);
+     	}}
+	document.addEventListener('DOMContentLoaded',ownId());
+	
+	const sp_vec = Array.of('','isagawa-shrine','denko-ji','sarusawa-pond','nara-craft-museum','sugioka-kason-syodo','narashiritu-shiryouhozonkan','ashibinosato','yoshikien-garden','tokuyuji-temple','nara-buddhist-sculpture-hall','nigiwainoie','monogatarikan','onjyo-kan','naramachi-shiryo-kan-museum','neiya-workshop','ho-tokuji','kataoka-bairin','daijyo-in','ko-shinoie','tobihino','ukimido-gazebo','shikinoniwa','jurin-in','yugayama-enchi','nara-park','manyo-botanical-garden','rokuen-park','kohfukuji-temple','gango-ji-temple','kozenji-temple','jr-nara-station','kintetsu-nara-station');
+	const ref = document.referrer;
+	if(!localStorage.getItem('visit')){
+		sp_vec.forEach((element,index) => {
+			if(ref.includes(element)){
+			localStorage.setItem('now',index);
+			}
+		});
+		window.location.href = 'https://stookia.github.io/color_basic-information/';
+	}
+</script>
+</head>
+
+<body>
+<header>
+	<img class="icon" src="icon.svg" href="https://stookia.github.io/color_basesite/">
+    	<h1 class="title">あなたの気持ちが奈良の地図に</h1>
+    	<nav class="nav">
+      	<ul class="menu-group">
+        <!--
+	<li class="menu-item"><a href="#">項目1</a></li>
+        <li class="menu-item"><a href="#">項目2</a></li>
+        <li class="menu-item"><a href="#">項目3</a></li>
+        <li class="menu-item"><a href="#">項目4</a></li>
+        <li class="menu-item"><a href="#">項目5</a></li>
+	-->
+      </ul>
+    </nav>
+ </header>
+	<div class="main">
+	<div class="a">
+  	<p id="jp_name" class="spot">名称</p>
+    	<p id="en_name" class="spot">spot_name</p><br>
+  	<p class="text">この場所で感じた「気持ち」の色を選んで下さい。<br>Please choose a color that matches the feeling you have in this place.</p><br>
+	</div>
+	<div class="kannseigo">
+		<div class="f"><p class="feel">にぎやかな<br>ドキドキ<br>Exciting</p></div>
+		<div class="f"><p class="feel">楽しい<br>興味深い<br>Interesting</p></div>
+		<div class="f"><p class="feel">陽気な<br>気分が上がる<br>Cheerful</p></div>
+		<div class="f"><p class="feel">癒される<br>のんびり<br>relaxing</p></div>
+		<div class="f"><p class="feel">きれいな<br>静かな<br>Beautiful</p></div>
+		<div class="f"><p class="feel">落ち着いた<br>Calm</p></div>
+		<div class="f"><p class="feel">神秘的な<br>Mysterious</p></div>
+	</div><br>
+	<div class="container">
+	<button class="button" id="1" type="button" onclick="clickButton(this)" style="background-color: #E0324A" value="#e0324a"></button>
+	<button class="button" id="2" type="button" onclick="clickButton(this)" style="background-color: #FFA851" value="#ffa851"></button>
+	<button class="button" id="3" type="button" onclick="clickButton(this)" style="background-color: #FFD351" value="#ffd351"></button>
+	<button class="button" id="4" type="button" onclick="clickButton(this)" style="background-color: #8BCE9E" value="#88ce9e"></button>
+	<button class="button" id="5" type="button" onclick="clickButton(this)" style="background-color: #0088FF" value="#0088ff"></button>
+	<button class="button" id="6" type="button" onclick="clickButton(this)" style="background-color: #355682" value="#355682"></button>
+	<button class="button" id="7" type="button" onclick="clickButton(this)" style="background-color: #BF91D3" value="#bf91d3"></button>
+	<button class="button" id="8" type="button" onclick="clickButton(this)" style="background-color: #D41F37" value="#d41f37"></button>
+	<button class="button" id="9" type="button" onclick="clickButton(this)" style="background-color: #FF9328" value="#ff9828"></button>
+	<button class="button" id="10" type="button" onclick="clickButton(this)" style="background-color: #FFC928" value="#ffc928"></button>
+	<button class="button" id="11" type="button" onclick="clickButton(this)" style="background-color: #6BC183" value="#6bc183"></button>
+	<button class="button" id="12" type="button" onclick="clickButton(this)" style="background-color: #0077E0" value="#0077e0"></button>
+	<button class="button" id="13" type="button" onclick="clickButton(this)" style="background-color: #2F4D73" value="#2f4d73"></button>
+	<button class="button" id="14" type="button" onclick="clickButton(this)" style="background-color: #AF78C9" value="#af78c9"></button>
+	<button class="button" id="15" type="button" onclick="clickButton(this)" style="background-color: #BA1B30" value="#b91c31"></button>
+	<button class="button" id="16" type="button" onclick="clickButton(this)" style="background-color: #FF7F00" value="#df7e00"></button>
+	<button class="button" id="17" type="button" onclick="clickButton(this)" style="background-color: #FFBF00" value="#ffbe00"></button>
+	<button class="button" id="18" type="button" onclick="clickButton(this)" style="background-color: #4EB56B" value="#4db56a"></button>
+	<button class="button" id="19" type="button" onclick="clickButton(this)" style="background-color: #0067C1" value="#0067c0"></button>
+	<button class="button" id="20" type="button" onclick="clickButton(this)" style="background-color: #294365" value="#294365"></button>
+	<button class="button" id="21" type="button" onclick="clickButton(this)" style="background-color: #A25EBF" value="#a25ebf"></button>
+	<button class="button" id="22" type="button" onclick="clickButton(this)" style="background-color: #9F1729" value="#9f1729"></button>
+	<button class="button" id="23" type="button" onclick="clickButton(this)" style="background-color: #D66B00" value="#d66b00"></button>
+	<button class="button" id="24" type="button" onclick="clickButton(this)" style="background-color: #D6A000" value="#d6a000"></button>
+	<button class="button" id="25" type="button" onclick="clickButton(this)" style="background-color: #429E5C" value="#419d58"></button>
+	<button class="button" id="26" type="button" onclick="clickButton(this)" style="background-color: #0057A3" value="#0057a3"></button>
+	<button class="button" id="27" type="button" onclick="clickButton(this)" style="background-color: #233956" value="#233956"></button>
+	<button class="button" id="28" type="button" onclick="clickButton(this)" style="background-color: #9247B2" value="#9247b2"></button>
+	<button class="button" id="29" type="button" onclick="clickButton(this)" style="background-color: #851322" value="#851322"></button>
+	<button class="button" id="30" type="button" onclick="clickButton(this)" style="background-color: #B25900" value="#b25900"></button>
+	<button class="button" id="31" type="button" onclick="clickButton(this)" style="background-color: #B28500" value="#b28500"></button>
+	<button class="button" id="32" type="button" onclick="clickButton(this)" style="background-color: #34834A" value="#34834a"></button>
+	<button class="button" id="33" type="button" onclick="clickButton(this)" style="background-color: #004989" value="#004989"></button>
+	<button class="button" id="34" type="button" onclick="clickButton(this)" style="background-color: #1D3048" value="#1d3048"></button>
+	<button class="button" id="35" type="button" onclick="clickButton(this)" style="background-color: #7D3D99" value="#7d3d99"></button>
+	<button class="button" id="36" type="button" onclick="clickButton(this)" style="background-color: #6B0F1B" value="#6b0f1b"></button>
+	<button class="button" id="37" type="button" onclick="clickButton(this)" style="background-color: #8E4700" value="#8e4700"></button>
+	<button class="button" id="38" type="button" onclick="clickButton(this)" style="background-color: #8E6B00" value="#8e6b00"></button>
+	<button class="button" id="39" type="button" onclick="clickButton(this)" style="background-color: #2B683D" value="#2b683d"></button>
+	<button class="button" id="40" type="button" onclick="clickButton(this)" style="background-color: #003B70" value="#003b70"></button>
+	<button class="button" id="41" type="button" onclick="clickButton(this)" style="background-color: #17263A" value="#17263a"></button>
+	<button class="button" id="42" type="button" onclick="clickButton(this)" style="background-color: #683180" value="#683180"></button>
+	<button class="button" id="43" type="button" onclick="clickButton(this)" style="background-color: #500B14" value="#500b14"></button>
+	<button class="button" id="44" type="button" onclick="clickButton(this)" style="background-color: #6B3500" value="#6b3500"></button>
+	<button class="button" id="45" type="button" onclick="clickButton(this)" style="background-color: #6B5000" value="#6b5000"></button>
+	<button class="button" id="46" type="button" onclick="clickButton(this)" style="background-color: #204F2D" value="#204f2d"></button>
+	<button class="button" id="47" type="button" onclick="clickButton(this)" style="background-color: #002B51" value="#002b51"></button>
+	<button class="button" id="48" type="button" onclick="clickButton(this)" style="background-color: #111C2B" value="#111c2b"></button>
+	<button class="button" id="49" type="button" onclick="clickButton(this)" style="background-color: #532766" value="#532766"></button>
+	</div>
+  <p class="text">
+    	あなたが選んだ色は<br>The color you chose is...
+	    <div class="box" style="background-color: #ffffff;"></div><br>
+    	<input class="chosen_color" type="text" value="#ffffff">
+    	です。
+  </p>
+	<a id="next" href="base.html" onclick="clickFunc()">次へ / next</a>
+ 	</div>
+  
+<!--
+<script>
+    document.addEventListener('DOMContentLoaded',master());
+    document.addEventListener('DOMContentLoaded',ownId());
+    function ownId(){
+      const vec = Array.of('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+      const id = localStorage.getItem('id')||0;
+      if(id===0){
+	const a = Math.floor(Math.random()*26)+1;
+        const random = Math.floor(Math.random()*9000000000)+1000000000;
+        localStorage.setItem('id',vec[a] + random);
+      }}
+
+    function master(){
+      const jp_name = document.getElementById('jp_name');
+      const en_name = document.getElementById('en_name');
+      const title = document.getElementById('title');
+      let next_url = document.getElementById('next');
+      const ref = document.referrer;
+
+      const url = 'https://stookia.github.io/color_';
+      const sp_vec = Array.of('','isagawa-shrine','denko-ji','sarusawa-pond','nara-craft-museum','sugioka-kason-syodo','narashiritu-shiryouhozonkan','ashibinosato','yoshikien-garden','tokuyuji-temple','nara-buddhist-sculpture-hall','nigiwainoie','monogatarikan','onjyo-kan','naramachi-shiryo-kan-museum','neiya-workshop','ho-tokuji','kataoka-bairin','daijyo-in','ko-shinoie','tobihino','ukimido-gazebo','shikinoniwa','jurin-in','yugayama-enchi','nara-park','manyo-botanical-garden','rokuen-park','kohfukuji-temple','gango-ji-temple','kozenji-temple','jr-nara-station','kintetsu-nara-station');
+      const jp_vec = Array.of('','率川神社','伝香寺','猿沢池','なら工藝館','奈良市杉岡華邨書道美術館','奈良市史料保存館','あしびの郷','吉城園','徳融寺','奈良仏像館','奈良町にぎわいの家','奈良町物語館','奈良市音声館','奈良町資料館','寧屋工房','法徳寺','片岡梅林','旧大乗院庭園','ならまち格子の家','飛火野','浮見堂','子規の庭','十輪院','瑜伽山園地','奈良公園','萬葉植物園','鹿苑','興福寺','元興寺','興善寺','JR 奈良駅','近鉄奈良駅');
+      const en_vec = Array.of('','Isagawa Shrine','Denko-ji Temple','Sarusawa Pond','Nara Craft Museum','Sugioka Kason Calligraphy Art Museum','Historical Materials Preservation House','Ashibinosato','Yoshikien Garden','Tokuyuji','Nara Buddhist Sculpture Hall','Naramaachi Nigiwai-No-Ie','Naramachi Story Museum','Onjyo-Kan Hall','Naramachi Shiryo-Kan Museum','Neiya Workshop','Hotoku-ji Temple','Kataoka Bairin','Former Daijo-in Temple Garden','Naramachi Koshi-No-Ie','Tobihino','Ukimido Gazebo','Shikinoniwa','Jurin-in','Yugayama Enchi','Nara Park','Manyo Botanical Garden','Rokuen Park','Kohfuku-ji Temple','Gango-ji Temple','Kozenji Temple','JR Nara Station','Kintetsu Nara Station');
+	if(!ref.includes('https://stookia.github.io/color_basic-information/')){
+		sp_vec.forEach((element,index) => {
+			if(ref.includes(element)){
+			localStorage.setItem('now',index);
+			}
+		});
+	}
+	const now = localStorage.getItem('now');
+	if(!localStorage.getItem('sp'+ now)){
+		jp_name.textContent = jp_vec[now];
+        	en_name.textContent = en_vec[now];
+		title.textContent = jp_vec[now] + " " + en_vec[now];
+        	next_url.href = url + sp_vec[now] + "-googlefrom/";
+    	}
+	if(localStorage.getItem('sp'+ now)==='1'){
+	    	window.location.href = 'https://stookia.github.io/color_basesite/';
+	}
+    }
+/*
+   function clickFunc(){
+		const now = localStorage.getItem('now');
+		localStorage.setItem('click'+now,1);
+    }*/
+
+    function clickButton(button){
+      	const color = button.value;
+	const now = localStorage.getItem('now');
+	const changeColor = "background-color: "+ color;
+      	const chosenColorInput = document.querySelector('.chosen_color');
+	
+	chosenColorInput.value = color;
+	document.querySelector('.box').style = changeColor;
+      	localStorage.setItem('color' + now, color);
+     }    
+  </script>
+-->
+</body>
+</html>
