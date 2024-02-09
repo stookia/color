@@ -179,5 +179,18 @@
      }    
   </script>
 -->
+	<script>
+		    function clickButton(button){
+      	const color = button.value;
+	const now = localStorage.getItem('now');
+	const changeColor = "background-color: "+ color;
+      	const chosenColorInput = document.querySelector('.chosen_color');
+	
+	chosenColorInput.value = color;
+	document.querySelector('.box').style = changeColor;
+      	localStorage.setItem('color' + now, color);
+     }    
+  </script>
+	</script>
 </body>
 </html>
